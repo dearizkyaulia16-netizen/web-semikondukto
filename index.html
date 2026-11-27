@@ -421,6 +421,56 @@ body {
     height: calc(100
 
 /* AREA DESKTOP */
+
+/* SEMICONDUCTOR LAB WALLPAPER */
+
+body {
+    background:
+        radial-gradient(ellipse at 75% 20%, rgba(0, 180, 255, 0.20), transparent 35%),
+        radial-gradient(ellipse at 20% 80%, rgba(0, 100, 180, 0.20), transparent 40%),
+        #061326 !important;
+}
+
+.main.retro-desktop {
+    background:
+        radial-gradient(circle at 75% 20%, rgba(0, 195, 255, 0.15), transparent 30%),
+        linear-gradient(rgba(20, 100, 160, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 100, 160, 0.07) 1px, transparent 1px),
+        #061326 !important;
+    background-size: auto, 35px 35px, 35px 35px, auto;
+}
+
+/* CIRCUIT GLOW */
+.main.retro-desktop::after {
+    content: "⚛  ⚡  Si  ⚡  ⚛";
+    position: absolute;
+    right: 35px;
+    bottom: 75px;
+    font-size: clamp(35px, 7vw, 85px);
+    font-weight: bold;
+    letter-spacing: 12px;
+    color: rgba(56, 189, 248, 0.13);
+    text-shadow: 0 0 25px rgba(0, 180, 255, 0.3);
+    pointer-events: none;
+}
+
+/* DESKTOP ICON GLOW */
+.desktop-icon span {
+    font-size: 38px !important;
+    filter: drop-shadow(0 0 8px #38bdf8);
+}
+
+.desktop-icon:hover {
+    background: rgba(56, 189, 248, 0.15) !important;
+    outline: 1px solid rgba(56, 189, 248, 0.5);
+}
+
+/* ICON LABEL */
+.desktop-icon small {
+    color: #e0f7ff;
+    text-shadow: 0 0 6px #0284c7;
+}
+
 .main.retro-desktop {
     position: relative;
     background: #008080 !important;
