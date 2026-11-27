@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Daftar aplikasi
     const apps = [
-        { id: "home", title: "Welcome to SEMILAB", icon: "🏠" },
-        { id: "upload", title: "Semiconductor Analyzer", icon: "⚛️" },
-        { id: "grafik", title: "Data Graphs", icon: "📈" },
-        { id: "tabel", title: "Data Table", icon: "📊" },
-        { id: "learning", title: "Learning Center", icon: "📚" },
-        { id: "documentation", title: "Documentation", icon: "📄" }
-    ];
+    { id: "home", title: "Silicon Universe", icon: "⚛️" },
+    { id: "upload", title: "Electric Analyzer", icon: "⚡" },
+    { id: "grafik", title: "Wave Laboratory", icon: "〰️" },
+    { id: "tabel", title: "Material Database", icon: "🧪" },
+    { id: "learning", title: "Physics Library", icon: "🔬" },
+    { id: "documentation", title: "System Blueprint", icon: "💠" }
+];
 
     // Tampilan desktop
     main.classList.add("retro-desktop");
