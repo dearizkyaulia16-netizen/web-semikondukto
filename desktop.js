@@ -169,11 +169,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function openWindow(windowBox) {
 
     document.querySelectorAll(".app-window").forEach(function (win) {
-        win.style.display = "none";
+        win.style.setProperty("display", "none", "important");
     });
 
-    windowBox.style.display = "flex";
     windowBox.classList.remove("maximized");
+    windowBox.style.setProperty("display", "flex", "important");
     windowBox.style.zIndex = 1000;
 }
 
