@@ -405,6 +405,221 @@ input {
 p, span, label {
     letter-spacing: 0.2px;
 }
+
+/* ===== RETRO WINDOWS DESKTOP ===== */
+
+body {
+    background: #008080 !important;
+    font-family: Tahoma, Arial, sans-serif !important;
+    overflow-x: hidden;
+}
+
+.main.retro-desktop {
+    margin: 0 !important;
+    padding: 20px !important;
+    width: 100% !important;
+    height: calc(100
+
+/* AREA DESKTOP */
+.main.retro-desktop {
+    position: relative;
+    background: #008080 !important;
+    min-height: 100vh;
+    padding: 25px !important;
+    overflow: auto;
+}
+
+/* IKON DESKTOP */
+.desktop-icons {
+    display: grid;
+    grid-template-columns: 90px 90px;
+    gap: 20px;
+    width: 200px;
+    position: relative;
+    z-index: 2;
+}
+
+.desktop-icon {
+    background: transparent !important;
+    border: none !important;
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 85px;
+    min-height: 80px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.desktop-icon span {
+    font-size: 32px;
+}
+
+.desktop-icon small {
+    font-size: 11px;
+    text-align: center;
+}
+
+/* JENDELA APLIKASI */
+.app-window {
+    position: absolute;
+    width: min(720px, calc(100% - 40px));
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    background: #c0c0c0;
+    border: 3px outset #eeeeee;
+    box-shadow: 5px 5px 0 rgba(0,0,0,.3);
+    overflow: hidden;
+}
+
+.window-titlebar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: move;
+    touch-action: none;
+}
+
+.window-controls {
+    display: flex;
+    gap: 3px;
+}
+
+.window-controls button {
+    padding: 2px 9px !important;
+    min-width: 25px;
+    color: black !important;
+    background: #c0c0c0 !important;
+    border: 2px outset white !important;
+    font-weight: bold;
+}
+
+.window-content {
+    padding: 12px;
+    overflow: auto;
+    color: #e5edf7;
+    background: #101827;
+}
+
+.app-window.maximized {
+    position: fixed;
+    inset: 10px 10px 55px 10px;
+    width: auto;
+    max-height: none;
+    z-index: 2000 !important;
+}
+
+/* TASKBAR */
+.retro-taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: #c0c0c0;
+    border-top: 3px outset white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    z-index: 5000;
+}
+
+.start-button,
+.taskbar-app {
+    background: #c0c0c0 !important;
+    color: black !important;
+    border: 2px outset white !important;
+    border-radius: 0 !important;
+    padding: 7px 12px !important;
+}
+
+.taskbar-apps {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+    overflow-x: auto;
+}
+
+.desktop-clock {
+    background: #c0c0c0;
+    color: black;
+    border: 2px inset white;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* START MENU */
+.start-menu {
+    display: none;
+    position: fixed;
+    bottom: 45px;
+    left: 5px;
+    width: 240px;
+    padding: 15px;
+    background: #c0c0c0;
+    color: black;
+    border: 3px outset white;
+    z-index: 6000;
+}
+
+.start-menu.show {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.start-menu button {
+    background: #c0c0c0 !important;
+    color: black !important;
+    border: 1px solid #777 !important;
+    text-align: left;
+    border-radius: 0 !important;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 650px) {
+    .main.retro-desktop {
+        padding: 12px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .desktop-icons {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        gap: 8px;
+    }
+
+    .app-window {
+        position: fixed !important;
+        left: 5px !important;
+        top: 65px !important;
+        width: calc(100% - 10px) !important;
+        max-height: calc(100vh - 120px) !important;
+    }
+
+    .window-content {
+        max-height: calc(100vh - 170px);
+    }
+
+    .app-window.maximized {
+        inset: 5px 5px 50px 5px !important;
+    }
+
+    .taskbar-app {
+        font-size: 10px;
+        padding: 5px !important;
+    }
+}
+                 
+    
 </style>
 </head>
 
@@ -831,6 +1046,7 @@ p, span, label {
 </main>
 
 <script src="app.js"></script>
-  
+<script src="desktop.js"></script>
+
 </body>
 </html>
