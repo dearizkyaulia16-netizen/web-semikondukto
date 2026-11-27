@@ -167,10 +167,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function openWindow(windowBox) {
-        windowBox.style.display = "flex";
-        windowBox.classList.remove("maximized");
-        windowBox.style.zIndex = 1000;
-    }
+
+    document.querySelectorAll(".app-window").forEach(function (win) {
+        win.style.display = "none";
+    });
+
+    windowBox.style.display = "flex";
+    windowBox.classList.remove("maximized");
+    windowBox.style.zIndex = 1000;
+}
 
     startButton.addEventListener("click", function () {
         startMenu.classList.toggle("show");
