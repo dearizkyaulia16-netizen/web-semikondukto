@@ -532,9 +532,9 @@ body {
 }
 
 .window-titlebar {
-    background: linear-gradient(90deg, #000080, #1084d0);
-    color: white;
-    padding: 6px;
+    background: linear-gradient(90deg, #071b38, #075985, #0891b2);
+    color: #e0f7ff;
+    padding: 9px 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -542,6 +542,8 @@ body {
     font-size: 13px;
     cursor: move;
     touch-action: none;
+    border-bottom: 1px solid #38bdf8;
+    box-shadow: 0 2px 12px rgba(0, 180, 255, 0.25);
 }
 
 .window-controls {
@@ -550,19 +552,28 @@ body {
 }
 
 .window-controls button {
-    padding: 2px 9px !important;
-    min-width: 25px;
-    color: black !important;
-    background: #c0c0c0 !important;
-    border: 2px outset white !important;
+    padding: 3px 10px !important;
+    min-width: 28px;
+    color: #e0f7ff !important;
+    background: linear-gradient(145deg, #164e70, #082f49) !important;
+    border: 1px solid #38bdf8 !important;
+    border-radius: 3px !important;
     font-weight: bold;
+    box-shadow: 0 0 7px rgba(56, 189, 248, 0.2);
+}
+
+.window-controls button:hover {
+    background: #0891b2 !important;
 }
 
 .window-content {
-    padding: 12px;
+    padding: 18px;
     overflow: auto;
-    color: #e5edf7;
-    background: #101827;
+    color: #e0f7ff;
+    background:
+        radial-gradient(circle at top right, rgba(0, 180, 255, 0.10), transparent 40%),
+        #08172a;
+    border-top: 1px solid #164e70;
 }
 
 .app-window.maximized {
@@ -579,23 +590,32 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 45px;
-    background: #c0c0c0;
-    border-top: 3px outset white;
+    height: 48px;
+    background: linear-gradient(90deg, #061326, #0c2945, #061326);
+    border-top: 2px solid #0891b2;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 5px;
+    padding: 5px 10px;
     z-index: 5000;
+    box-shadow: 0 -3px 18px rgba(0, 180, 255, 0.18);
 }
 
 .start-button,
 .taskbar-app {
-    background: #c0c0c0 !important;
-    color: black !important;
-    border: 2px outset white !important;
-    border-radius: 0 !important;
+    background: linear-gradient(145deg, #164e70, #082f49) !important;
+    color: #e0f7ff !important;
+    border: 1px solid #38bdf8 !important;
+    border-radius: 3px !important;
     padding: 7px 12px !important;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
+}
+
+.start-button:hover,
+.taskbar-app:hover {
+    background: #0891b2 !important;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
 }
 
 .taskbar-apps {
@@ -606,11 +626,12 @@ body {
 }
 
 .desktop-clock {
-    background: #c0c0c0;
-    color: black;
-    border: 2px inset white;
+    background: #082f49;
+    color: #67e8f9;
+    border: 1px solid #38bdf8;
     padding: 5px 10px;
     font-size: 12px;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.25);
 }
 
 /* START MENU */
