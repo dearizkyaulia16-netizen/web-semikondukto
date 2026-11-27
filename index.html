@@ -415,10 +415,17 @@ body {
 }
 
 .main.retro-desktop {
-    margin: 0 !important;
-    padding: 20px !important;
-    width: 100% !important;
-    height: calc(100
+    position: relative;
+    background:
+        radial-gradient(circle at 75% 20%, rgba(0, 195, 255, 0.18), transparent 30%),
+        linear-gradient(rgba(20, 100, 160, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 100, 160, 0.08) 1px, transparent 1px),
+        #061326 !important;
+    background-size: auto, 35px 35px, 35px 35px, auto;
+    min-height: 100vh;
+    padding: 25px !important;
+    overflow: auto;
+}
 
 /* AREA DESKTOP */
 
