@@ -8,6 +8,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let resistivityChart = null;
     let conductivityChart = null;
 
+ // FITUR PENCARIAN TABEL
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.toLowerCase();
+        const rows = tableBody.querySelectorAll("tr");
+
+        rows.forEach(row => {
+            row.style.display = row.textContent.toLowerCase().includes(keyword)
+                ? ""
+                : "none";
+        });
+    });
+}
+
     // MEMBACA DATA CSV
     function readCSV(file) {
         return new Promise((resolve, reject) => {
@@ -211,7 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 updateTable(data);
                 updateCharts(data);
 
-                document.getElementById("resultsArea").style.display = "block";
                 document.getElementById("analysisStatus").textContent =
                     "✓ Dataset berhasil dianalisis.";
 
